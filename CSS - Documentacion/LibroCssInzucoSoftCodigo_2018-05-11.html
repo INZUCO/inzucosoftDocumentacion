@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documentacion CSS</title>
+	<!--PRIMERO normalize-->
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<!--SEGUNDO tus archivos-->
+	<link rel="stylesheet" type="text/css" href="LibroCssInzucoSoftCodigo_2018-05-11.css">
+	<!--TERCERO tus modernizr-->
+	<link rel="stylesheet" type="text/css" href="modernizr-custom.js">
+</head>
+<body>
+	<h1>Documentacion</h1>
+	<ul>
+		<li>
+			<a target="_blank" href="https://www.w3schools.com/css/default.asp">w3schools</a> <br>
+			<a target="_blank" href="http://www.tutorialmonsters.com/resetear-un-archivo-css/">tutorialmonsters</a> <br>
+			<a target="_blank" href="http://librosweb.es/libro/css_avanzado/">css avanzado</a> <br>
+		</li>
+	</ul>
+
+	<H1>SELECTORES</H1>
+	<section id="seleccion">
+		ID.
+		<aside id="ID0">Hola ID</aside> <br>
+		CLASES
+		<aside class="clase0">Hola Clase</aside><br>
+
+		===== Afecta Hermanos que tenga un hermano justo arriba. ====
+		<div id="uno">
+			<p>ParrafoA1</p>
+			<p>ParrafoA2</p>	
+			<aside></aside>
+			<p>ParrafoA3. No carga este porque se rompe con ASIDE. No tiene un hermano mayor P</p>
+		</div>
+		<br>
+
+		===== Afecta todos los hermanos sin excepción. ====	
+		<div id="dos">
+			<p>ParrafoB1</p>
+			<p>ParrafoB2</p>
+			<aside> ASIDE lo rompe pero lo carga el tres</aside>	
+			<p>ParrafoB3</p>
+		</div>
+
+		===== Atributos. ====
+		<div id="tres">
+			<h3 title="uno">Titulos3.1</h3>
+			<h3>Titulos3.2</h3>
+			<h3 title="tres">Titulos3.3</h3>
+			<h3>Titulos3.4</h3>
+			<h3 title="cinco inzuco">Titulos3.5</h3>
+			<h3 title="inzuco pruebas">Titulos3.6</h3>
+			<h3 title="zuniga inzuco conde">Titulos3.7</h3>
+			<h3 title="" lang="es-ES"  ="ganboa">Titulos3.8</h3>
+			<h3 title="conde">Titulos3.9</h3>
+			<h3 title="cortes" lang="es-ES">Titulos3.10</h3>
+		</div>
+	</section>
+
+
+	<H1>UNIDADES</H1>
+	<section id="medidas">
+		<!--======================================
+		 	UNIDADES DE MEDIDAS ABSOLUTAS.
+		========================================-->
+		<H2>UNIDADES DE MEDIDAS RELATIVAS.</H2>
+		<div>
+			<p class="em">Párrafo EM</p>
+			<p class="ex">Párrafo EX</p>
+			<p class="px">Pixeles PX</p>
+			<p class="rem">Párrafo REM. No tiene herencia</p>
+		</div>
+		<H2>UNIDADES DE MEDIDAS ABSOLUTAS.</H2>
+		<div>
+			<p class="in">Pulgada</p>
+			<p class="cm">Centimetro</p>
+			<p class="mm">Milimetro</p>
+			<p class="pt">Puntos</p>
+			<p class="pc">Picas</p>
+		</div>
+		<H2>UNIDADES DE MEDIDAS PORCENTAJE %.</H2>
+		<div id="porcentaje">				
+			<div id="por0">Sin %</div>
+			<div id="por1">Con %</div>
+		</div>		
+	</section>
+
+	<H1>COLORES</H1>
+	<section id="colores">
+		<div id="col00">Palabras reservadas</div>
+		<div id="col01">RGB</div>
+		<div id="col02">Hexadecimal</div>
+		<div id="col03">Porcentual</div>
+		<div id="col04">HSL</div>
+		<div id="col05">RGBA</div>
+		<div id="col06">HSLA</div>
+
+	</section>
+	
+	<H1>CAJA</H1>
+	<section id="caja">
+		<div id="caja1">
+			<picture>
+				<img src="caja.gif">
+			</picture>
+		</div>
+	</section>
+
+	<h1>DIMENSIONES</h1>
+	<section id="dimensiones">
+		<div id="dime0">
+			Minimo Y un Maximo de ancho.
+		</div>
+		<div></div>
+	</section>
+
+	<h1>MARGIN y PADDING</h1>
+	<section id="mp">
+		<div>
+			
+		</div>
+	</section>
+
+	<h1>DISPLAY</h1>
+	<section id="display0">
+		<div id="dis01">
+			<h3>display inline-block</h3>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+		</div>
+		<div id="dis02">
+			<h3>display inline</h3>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+			<p>Mensaje de texto</p>
+		</div>
+		<div id="dis03">
+			<h3>display none</h3>
+			<p class="dos">Mensaje de texto 1</p>
+			<p class="dos">Mensaje de texto 2</p>
+			<p class="uno">Mensaje de texto 3</p>
+			<p class="dos">Mensaje de texto 4</p>
+			<p class="dos">Mensaje de texto 5</p>
+		</div>
+	</section>
+
+	<h1>POSICION</h1>
+	<section id="posicion0">
+		<h3>static y relative</h3>
+		<div id="padre0">
+			<div id="hijo01"></div>
+		</div>
+		<h3>relative2</h3>
+		<div id="padre1">
+			<div id="hijo11"></div>
+			<div id="hijo12"></div>
+		</div>
+		<h3>absolute</h3>
+		<div id="padre2">
+			<div id="hijo21"></div>
+			<div id="hijo22"></div>
+		</div>
+		<h3>position fixed</h3>
+		<div id="padre3">
+			<div id="hijo31">La posicion con respecto al BODY</div>
+		</div>
+		
+		<div class="clear0"></div>
+
+	</section>
+
+	<h1>Float y Clear</h1>
+	<section id="fl">
+		<div id="fl0">
+			<div class="fl01" ></div>
+
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+			<div class="fl02" ></div>
+
+			<div class="fl03" ></div>
+			<div class="fl03" ></div>
+			<div class="fl03" ></div>
+
+		</div>
+	</section>
+
+	<h1>z-index</h1>
+	<section id="z">
+		<div id="z0">
+			<div class="z01"></div>
+			<div class="z02"></div>
+			<div class="z02"></div>
+			<div class="z02"></div>
+		</div>
+	</section>
+
+	<h1>overflow</h1>
+	<section id="o">
+	<div id="o0">
+		<div class="o01"></div>
+		<div class="o02"></div>
+		<div class="o03"></div>
+		<div class="o04"></div>
+	</div>
+	</section>
+
+	<h1>visibility y opacity</h1>
+	<section id="v">
+		<div class="visible">1</div>
+		<div class="no-visible">2</div>
+		<div class="visible">3</div>
+		<div class="no-visible">4</div>
+		<div class="opacidad">5</div>
+	</section>
+
+	<h1>PseudoElementos</h1>
+	<!-- Para que un PseudoElementos sfuncione debe tener CONTENT -->
+	<section id="se">
+		<div id="so0">
+			<p>YO SOY EL ELEMENTO</p>
+		</div>
+		<div id="so1">
+			<p id="so11">YO SOY EL ELEMENTO2</p>
+		</div>
+		<div id="so2"></div>
+	</section>
+
+	<h1>PseudoClases</h1>
+	<section id="sc">
+		<h3>enlaces</h3>
+		<div id="enl">
+			<a href="#" id="link1">link 1</a>
+			<a href="#" id="link2">link 2</a>
+		</div>
+		<h3>globales</h3>
+		<div id="glo">
+			<p>hover</p>
+			<span>active - Clik sin soltar</span> <br><br>
+			<input type="text" name="text">
+		</div>
+		<h3>Otras</h3>
+		<div id="otras0">
+			<p>N1. Parrafo 1</p>
+			<p>N2. Parrafo 2</p>
+			<p>N3. Parrafo 3</p>
+			<p>N4. Parrafo 4</p>
+			<p>N5. Parrafo 5</p>
+			<p>N6. Parrafo 6</p>
+			<p>N7. Parrafo 7</p>
+			<p>N8. Parrafo 8</p>
+			<p>N9. Parrafo 9</p>
+			<p>N10. Parrafo 10</p>						
+			<a href="#">N11. Enlace 1</a>
+			<a href="#">N12. Enlace 2</a>
+			<a href="#">N13. Enlace 3</a>
+			<article>N14. Articulo 1</article>
+			<article class="arti2">N15. Articulo 2</article>
+			<article>N16. Articulo 3</article>
+			<aside>N17. aside</aside>
+			<aside>N18. aside</aside>
+			<aside>N19. aside</aside>
+		</div>
+	</section>
+
+
+</body>
+</html>

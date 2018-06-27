@@ -1,0 +1,211 @@
+<!--html:5 <=> TAB -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documentacion HTML</title>
+	<!-- Añadir archivos CSS -->
+	<!-- Añadir Fuentes Externas -->
+	<!-- Añadir Metadatos. (keywords:
+							description:
+							robots:
+							author: 
+							owner:
+							) -->
+</head>
+<body>
+	<header> 
+			< header > <=> Cabecera de la página
+		<!-- 
+			NOTA. Puede ir acá.
+			* Logo tipo
+			* Titulo de la página entre H1
+			* Menú de navegación NAV
+			* Banner. Imagen grande
+		 -->
+	</header>
+
+
+
+		<!--MENU DE NAVEGACION-->
+		<nav> <!-- nav>ul>li*5 <=> TAB -->
+			< nav > <=> MENU navegacion
+			<ul> <!--Lista no ordenada-->
+				<li>
+					<a href="#">Pagina1</a>
+				</li> <!--Para el lis items-->
+				<li><a href="#">Pagina2</a></li>
+				<li><a href="#">Pagina3</a></li>
+				<li><a href="#">Pagina4</a></li>
+
+				<!--Abrir en otra pestaña-->
+				<li>
+					<a target="_blank" href="https://www.youtube.com/"> youtube </a> 
+				</li>
+			</ul>
+		</nav>
+
+
+
+		<!--TITULOS Se usan para el SEO-->
+		<h1>Tìtulos1. Solo 1. Es el titulo de la pagina</h1>
+		<h2>Tìtulos2. Entre 0 y 5 maximo. Segun la importancia en el SEO. </h2>
+		<h3>Tìtulos3. Entre 0 y 7 maximo.</h3>
+		<h4>Tìtulos4. Muchos</h4>
+		<h5>Tìtulos5. Muchos</h5>
+		<h6>Tìtulos6. Muchos</h6>
+
+
+
+		<!--AGRUPA TITULOS-->
+		<hgroup>
+			< hgroup > Para darle fuerza en el valor semántico entre títulos. Título va relacionado. Usar lo menos posible.
+			<h1>Titulo UNO</h1>
+			<h2>Titulo DOS</h2>
+		</hgroup>
+
+
+
+		<!--=====================================
+		=                ENLACES                =
+		======================================-->		
+		 ../ <=> Me saca una carpeta. </br>
+		<a href="#">Enlaces</a>
+		<ul>
+			<li>
+				<a href="ruta/archivo.extencion"> Nosotros </a> Ir a una pagina en mi proyecto.
+			</li>	
+			<li>
+				<a href="https://www.youtube.com/"> Youtube </a> Ir a una parte del layout en que estoy, o de la hoja de trabajo.
+			</li>			
+			<li>
+		      <!-- target="_blank" -->
+				<a target="_blank" href="https://www.youtube.com/"> Youtube Nueva Pestaña </a> target="_blank" <=> Abrir en una nueva pestaña.
+			</li>
+			<li>
+		            <!-- #ID -->
+				<a href="#inzuco"> Deportes </a> Ir a una parte especifica de la pagina.
+			</li>
+		</ul>
+
+		
+
+		<!--=====================================
+		=                 PARRAFO               =
+		======================================-->
+		<p>< P > <=> Parrafos</p>
+		
+		<span>< SPAN > <=> Diferenciar parte de un parrafo</span> <br>
+		<strong> < STRONG > <=> Para destacar fraces</strong> <br>
+		<em> < EM > <=> Para destacar fraces con menos fuerza que strong</em>
+
+		<!--=====================================
+		=               SECIONES                =
+		======================================-->
+		<section>
+			< section > <=> Son las areas mas globales. Agrupa por el mismo contenido entre si.
+		</section>
+
+		<!--=====================================
+		=               ARTICULO                =
+		======================================-->
+		<article>
+			< article > <=> Varios elemento en uno solo. Tipo POST
+		</article>
+
+
+		<!--=====================================
+		=                 aside                 =
+		======================================-->
+		<aside>
+			< aside > <=> Contenido los temas relacionado con la pagina. Link externos 
+		</aside>
+
+		<!--=====================================
+		=                    DIV                =
+		======================================-->
+		<div>
+			< div > <=> Contenido. Para hacer divisiones y usar el css, otra especie de agrupador.
+		</div>
+
+
+		<!--=====================================
+		=                IMAGEN                 =
+		======================================-->
+		<figure> 
+			< figure > <=> Imagenes
+
+			<img src="uchiha.jpg" alt="Un heroe.....">
+			<figcaption>Texto asociado a la Imagen tipo leyenda...</figcaption>
+		</figure>
+
+		<!--=====================================
+		=                AUDIO                  =
+		======================================-->
+		Audio <br>
+		<audio src="SiYoPudiera.mp3" type="audio/mp3" controls="controls">
+			
+		</audio> <br><br>
+
+		<!--=====================================
+		=                 VIDEO                 =
+		======================================-->
+		< video > = En lo posible montarlos a youtube o Vicmeo <br>
+		Local <br>
+		<video src="2018-03-21 15-30-49.mp4" type="video/mp4" controls="controls"></video>
+
+		<br>
+		Youtube <br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/tOeHV1MZIZA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+		<!--=====================================
+		=            Section comment            =
+		======================================-->
+	<br><br><br>
+
+	<form id="form" name="form" method="post" action="inzuco.php">
+		<input type="text"	 id="email" name="email"  placeholder="Correo electronico">
+		<input type="submit" id="boton" name="submit" value="Enviar IZC" >
+	</form>
+
+	<br><br><br><br>
+
+	<footer>< footer >  <=>  Pie de la pagina</footer>
+
+
+	<!-- Añadir archivos JS -->	
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<!--=====================================
+	=             Documentacion             =
+	======================================-->	
+	<strong>Documentacion</strong>
+	<ul>
+		<li>
+			<a target="_blank" href="https://www.w3.org/html/">w3</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://www.w3.org/standards/webdesign/htmlcss">html y css</a>
+		</li>
+		<li>			
+			<a target="_blank" href="https://www.w3schools.com/html/html5_intro.asp">w3school</a>
+		</li>
+		<li>			
+			<a target="_blank" href="https://validator.w3.org/#validate_by_uri">Validador</a>
+		</li>
+		<li>			
+			<a target="_blank" href="https://vinkula.com/estructura-del-codigo-html5-anatomia-de-una-pagina-web/">Estructura del código HTML5</a>			
+		</li>
+	</ul>
+</body>
+</html>
+
+<!-- Docuentacion. -->
+
+

@@ -1,0 +1,608 @@
+/* ========================================== 
+-khnqueror <=> Konqueror
+-ms- <=> Internet Explorer
+-moz- <=> Firefox
+-o- <=> Opera
+-webkit- <=> chrome
+
+Pagina.
+https://caniuse.com/
+========================================== */
+body{
+	margin-left: 10px;
+}
+
+h3{
+	color: #BDBABA;
+}
+
+section>div{ /*Afecta todos los parrafos que este dentro de un DIV y asuvez este este dentro de un SECTION*/
+	color: #BDBABA;
+}
+/*==================================================================
+  ==================================================================
+						SELECTORES.
+  ==================================================================
+  ================================================================*/
+
+/*ID*/
+aside#ID0{
+	color: red;
+}
+
+.clase0{
+	color: blue;
+}
+
+
+
+/*HERMANO SIGUIENTE*/
+#seleccion>#uno>p+p{ /* + <=> Afecta a todos los parrafos que tenga un parrafo antes*/
+	color: #FF0000;
+	font-weight: bold;
+}
+
+/*HERMANO DL LADO*/
+#seleccion>#dos>p~p{ /* + <=> Afecta a todos los parrafos que tenga un parrafo antes*/
+	color: #46ff33;
+	font-weight: bold; /*Negrita*/
+}
+
+/* ~ alt + 126 */
+
+/*===================
+SELECTORES ATRIBUTOS.
+=====================*/
+#tres>h3[title]{ /*afecta a todo los que tenga ese atibuto*/
+	color:  #094403;
+	font-weight: bold;
+}
+
+#tres>h3[title="tres"]{ /*afecta a todo los que tenga ese atibuto mas el nombre*/
+	color: #7b44e4;
+	font-weight: bold;
+}
+
+#tres>h3[title~="inzuco"]{ /*afecta a todo los que tenga ese atibuto mas el nombre inzuco*/
+	color: #8d8d08;
+	font-weight: bold;
+}
+
+#tres>h3[lang |= "es"]{ /*afecta a todo inicien con es y luego tengan un - */
+	color: #EF0202;
+	font-weight: bold;
+}
+
+
+/*==================================================================
+  ==================================================================
+						UNIDADES.
+  ==================================================================
+  ================================================================*/
+
+/*======================================
+	 UNIDADES DE MEDIDAS RELATIVAS.
+========================================*/
+#medidas{ /*La seleccion de medidas.*/
+	font-size: 16px; /*Tamaño de las letras*/
+}
+
+#medidas>div>.em{
+/*  EM toma por erencia en este caso 16*2 = 32
+	16px de la seccion
+	2em 
+	Se basa en la M mayuscula de la fuente que estamos utilizando
+	Usar esta para los TEXTO
+	*/
+	font-size: 2em;
+	font-weight: bold;
+	color:  #021097;
+}
+
+#medidas>div>.ex{/*toma como base la altura de la x minuscula*/
+	font-size: 2ex;
+	font-weight: bold;
+	color:  #908E00;
+}
+
+#medidas>div>.px{ /*depende de la pantalla medida relativa*/
+	font-size: 12px;
+	font-weight: bold;
+	color:  #E135CA;
+}
+
+#medidas>div>.rem{
+	font-size: 12px;
+	font-weight: bold;
+	color:  #D56D05;
+}
+
+/*======================================
+	 UNIDADES DE MEDIDAS ABSOLUTAS.
+========================================*/
+
+#medidas>div>.in{
+	font-size: 0.3in; /* .3in es lo mismo */
+	font-weight: bold;
+	color: #442301;
+}
+#medidas>div>.cm{
+	font-size: 0.8cm;
+	font-weight: bold;
+	color: #F15656;
+}
+#medidas>div>.mm{
+	font-size: 8mm;
+	font-weight: bold;
+	color: #DEF202;
+}
+#medidas>div>.pt{
+	font-size: 20pt;
+	font-weight: bold;
+	color: #107602;
+}
+#medidas>div>.pc{
+	font-size: 1.5pc;
+	font-weight: bold;
+	color: #04809D;
+}
+
+#medidas>#porcentaje>div{
+	margin: 20px; /*Margen en todos los costados*/
+	color: white; /*Color del texto*/
+	font-weight: bold; /*Negrita*/
+	background-color: red; /*Color del fondo*/
+	text-align: center; /*Centrar vertica el texto*/
+
+}
+#medidas>#porcentaje>#por0{
+	height: 100px;
+	width: 200px;
+}
+#medidas>#porcentaje>#por1{
+	width: 50%;
+	height: 100px;
+}
+
+
+/*==================================================================
+  ==================================================================
+						COLORES.
+  ==================================================================
+  ================================================================*/
+
+/*======================================
+	 Palabras reservadas.
+========================================*/
+#colores>div{
+	height: 100px;
+	margin: 20px;
+	width: 100px;
+	text-align: center;
+	color: white;
+	border: 1px solid black;
+}
+
+#colores>#col00{
+	background-color: red;
+}
+
+#colores>#col01{
+	background-color: rgb(12,16,51);
+}
+
+#colores>#col02{
+	background-color:  #4d0808;
+}
+
+#colores>#col03{
+	background-color:  rgb( 12%, 11%, 50% );
+}
+
+#colores>#col04{
+	background-color:  hsl(42, 97%, 32% ); /* 1.Grado 2.Luz 3.Saturacion*/
+}
+
+#colores>#col05{
+	background-color: rgb(12,16,51,0.5);
+}
+
+#colores>#col06{
+	background-color:  hsl(42, 97%, 32%, 0.5 ); /* 1.Grado 2.Luz 3.Saturacion*/
+}
+
+/*==================================================================
+==================================================================
+					CAJA.
+==================================================================
+================================================================*/
+#caja{
+	margin: 20px;
+}
+
+#caja>#caja1{
+background: no-repeat;
+}
+
+/*==================================================================
+==================================================================
+					DIMENSIONES.
+==================================================================
+================================================================*/
+#dimensiones>div{
+	width: 50%;
+	height: 100px;
+	margin-left: 20px;
+	background-color: blue;
+	color: black;
+}
+
+#dimensiones>#dime0{
+	background-color: red;
+	font-weight: bold;
+
+	min-width: 250px;
+	max-width: 400px;
+}
+
+/*==================================================================
+==================================================================
+					MARGIN y PADDING.
+==================================================================
+================================================================*/
+#mp>div{
+	
+	width: 50%; /*Ancho*/
+	height: 200px; /*Alto*/
+	border: 2px solid black; /*Borde*/
+
+	margin: 20px; /*Margen los 4 lados*/
+/*margin: 50px 30px; Margen Y X
+	margin: 5px 2px 25px 12px; margen en los 4 lados de forma independiente
+	margin-top: 2px; Margen Arriba
+	margin-right: 2px;	Marge de la derecha
+	margin-bottom: 2px; Margen inferior
+	margin-left: 2px; Margen de la izquierda */
+	padding: 5px; /*Borde interno*/
+	/*padding Tiene las misma propiedades del margin*/
+}
+
+
+/*================================================================
+==================================================================
+					MARGIN y PADDING.
+==================================================================
+================================================================*/
+#display0>div>p{
+	border: 2px solid black;
+	background: orange;
+	color: black;
+	margin: 5px 10px;
+}
+
+#display0>div>h3{
+	color: black;
+}
+
+#display0>#dis01>p{
+	/*Ocupa el tamaño del texto. 
+	Se coloca uno al lado del otro. 
+	Y sino se muestra en otra linea*/
+	display: inline-block; 
+}
+
+#display0>#dis02>p{
+	/*Ocupa el tamaño del texto. 
+	Se coloca uno al lado del otro. 
+	Y sino se muestra en otra linea asi solo quepa una palabra*/
+	display: inline; 
+}
+
+#display0>#dis03>.uno{
+	/*No renderiza el de la clase UNO*/
+	display: none; 
+}
+
+/*================================================================
+==================================================================
+					POSICION.
+==================================================================
+================================================================*/
+#posicion0{
+	/*Este es el section*/
+	padding: 0px 20px;
+}
+
+/*static y relative*/
+#posicion0>#padre0{
+	width: 250px;
+	height: 250px;
+	background: orange;
+}
+
+#posicion0>#padre0>#hijo01{
+	width: 50px;
+	height: 50px;
+	background: red;
+  /*position: static; /*NO miran las posiciones van al sitio por defecto...*/
+	position: relative;
+	top: -25px; /*Superior*/
+	left: 100px; /*Izquierda*/
+	/*bottom: 10px;
+	right: 20px;*/
+}
+
+/*relative 2 */
+#posicion0>#padre1{
+	width: 250px;
+	height: 250px;
+	background: orange;
+}
+
+#posicion0>#padre1>div{
+	display: inline-block;
+  /*vertical-align: top; arriba*/
+  	vertical-align: middle; /*Alinear al medio*/
+}
+
+#posicion0>#padre1>#hijo11{
+	width: 50px;
+	height: 50px;
+	background: red;
+}
+#posicion0>#padre1>#hijo12{
+	width: 100px;
+	height: 100px;
+	background: blue;
+}
+
+
+
+#posicion0>#padre2{
+	width: 250px;
+	height: 250px;
+	background: orange;
+	position: relative; 
+	/*Para que los hijos de posicion position: absolute lo tomen de referencia */
+	/*NOTA. si un hijo tiene position: absolute; el padre debe llevar cualquier position diferente al absolute*/
+}
+
+#posicion0>#padre2>#hijo21{
+	width: 50px;
+	height: 50px;
+	background: red;
+	position: absolute; 
+	/*absolute. Hace que el elemento no existiera
+	  en cuanto a posicionamiento*/
+	/*Si tiene position: absolute trato de darle posicionamiento lo hace con el padre. 
+	O el que tenga un position que no sea absolute */
+	top: 0px; /*Superior*/
+}
+
+#posicion0>#padre2>#hijo22{
+	width: 100px;
+	height: 100px;
+	background: blue;
+
+}
+
+#posicion0>#padre3>#hijo31{
+	width: 400px;
+	height: 200px;
+	background: green;	
+	/*position: fixed;**/
+	/*Lo pega directa mente al body*/
+	/*Hacer que el menu se quede pegado arriba... */
+}
+
+/*================================================================
+==================================================================
+					FLOAT y CLEAR.
+==================================================================
+================================================================*/
+#fl>div{
+	background: orange;
+	width: 300px;
+	height: 350px;
+}
+
+
+
+
+#fl>div>.fl01{
+	background: red;
+	width: 100px;
+	height: 100px;
+	/*float: right;*/
+	float: left; /*Normal mente cuando se usa el float el hermano 
+	               de este elemento de be tener display: inline-block*/
+}
+
+#fl>div>.fl02{
+	background: gray;
+	width: 50px;
+	height: 50px;
+	display: inline-block; /*Remderiza en una sola linea.*/
+	margin-left: 5px;
+}
+
+#fl>div>.fl03{
+	background: blue;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	clear: both; /*Quita el float*/
+}
+
+/*================================================================
+==================================================================
+					Z-INDEX.
+==================================================================
+================================================================*/
+#z>#z0{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+#z>div>.z01{
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute; /*Hace el elemento invisible encuanto a posicion*/
+}
+
+#z>div>.z02{
+	width: 50px;
+	height: 50px;
+	background: red;
+	margin: 2px;
+	display: inline-block;
+	z-index: 10; /*para que el z-index funcione sienpre el elemento donde se use debe tener POSITION no importa cual sea*/
+	position: relative;
+}
+
+/*================================================================
+==================================================================
+					overflow
+==================================================================
+================================================================*/
+#o>#o0{
+	width: 300px;
+	height: 300px;
+	background: orange;
+	overflow: hidden; /*Todo lo que se salga del padre no se vea*/
+}
+
+#o>div>.o01{
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute; /*Hace el elemento invisible encuanto a posicion*/
+}
+
+#o>div>.o02{
+	width: 50px;
+	height: 50px;
+	background: red;
+	margin: 2px;
+	display: inline-block;
+	z-index: 10; /*para que el z-index funcione sienpre el elemento donde se use debe tener POSITION no importa cual sea*/
+	position: relative;
+	top: -10px;
+}
+
+#o>div>.o03{
+	width: 50px;
+	height: 50px;
+	background: green;
+	margin: 2px;
+	display: inline-block;
+	z-index: 10; /*para que el z-index funcione sienpre el elemento donde se use debe tener POSITION no importa cual sea*/
+	position: relative;
+	top: -20px;
+}
+
+#o>div>.o04{
+	width: 50px;
+	height: 50px;
+	background: black;
+	margin: 2px;
+	display: inline-block;
+	z-index: 10; /*para que el z-index funcione sienpre el elemento donde se use debe tener POSITION no importa cual sea*/
+	position: relative;
+	top: -30px;
+}
+
+/*================================================================
+==================================================================
+					Z-INDEX.
+==================================================================
+================================================================*/
+#v{
+	width: 300px;
+	height: 300px;
+	background: orange;
+}
+
+#v>div{
+	width: 50px;
+	height: 50px;
+	background: gray;
+	margin: 10px;
+}
+
+#z>div>.z01{
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute; /*Hace el elemento invisible encuanto a posicion*/ 
+}
+
+.no-visible{
+	visibility: hidden; /*Oculta el elemento pero mantiene su pasicion*/
+}
+
+.opacidad{
+	opacity: 0.5; /*Oculta el elemento pero mantiene su pasicion*/
+}
+
+/*================================================================
+==================================================================
+					PseudoElementos.
+==================================================================
+================================================================*/
+/*Para que un PseudoElementos sfuncione debe tener CONTENT*/
+/*Se selecciona por etiqueta o por ID*/
+#se>#so0>p:before{
+	content: "01. before  ";
+	color: red;
+}
+
+#se>#so1>#so11:after{
+	content: " 02. after";
+	color: blue;
+}
+
+
+/*================================================================
+==================================================================
+					PseudoClases.
+==================================================================
+================================================================*/
+#sc>#enl>a:link{/*Visitado*/
+	color: red;
+}
+#sc>#enl>a:visited{/*Pendiente de visitar*/
+	color: green;
+}
+
+/*Globales*/
+#sc>#glo>p:hover{
+	color: blue;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#sc>#glo>span:active{
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#sc>#glo>input:focus{
+	border-radius: 5px;
+	background: rgb(0,0,0,0.1);
+}
+
+#sc>#otras0 *{
+	border: 1px solid black;
+	width: 90px;
+	height: 50px;
+	background: orange;
+	display: inline-block;
+	margin: 5px;
+	color: blue;
+	font-size: 13px; 
+}

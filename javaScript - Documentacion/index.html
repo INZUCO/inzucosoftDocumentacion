@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="inzucoSoft.css">
+
+	<script type="text/javascript" src="inzucoSoftCargaPrimero.js"></script>
+</head>
+<body>
+	<h2>Eventos</h2>
+	<input type="button" name="boton1" value="onclick" onclick="alert('Click en el boton');"> <br><br>
+	<input type="button" name="boton1" value="onmouseover" onmouseover="alert('Sobre el boton');"> <br><br>
+	<input type="button" name="boton1" value="onmouseout" onmouseout="alert('Saliendo del boton');"> <br><br>
+
+	<h2>Funciones</h2>
+	<input type="button" value="onclick Funcion" 				onclick="holaMundo1()"> <br><br>
+	<input type="button" value="onclick Funcion 1 Parametros" 	onclick="holaMundo2('inzucoSoft')"> <br><br>
+	<input type="button" value="onclick Funcion 2 Parametros" 	onclick="holaMundo3(12,5)"> <br><br>
+
+	<p>Recuperar parametros del mismo boton</p>
+	<input type="button" name="Boton1" value="Valor a Recuperar1" id="idRecuperar1" 
+		   onclick="recuperarDatos(this.id, this.name, this.value)"><br>
+	<input type="button" name="Boton2" value="Valor a Recuperar2" id="idRecuperar2" 
+		   onclick="recuperarDatos(this.id, this.name, this.value)"><br>
+	<input type="button" name="Boton3" value="Valor a Recuperar3" id="idRecuperar3" 
+		   onclick="recuperarDatos(this.id, this.name, this.value)"><br>
+
+	<p>Retornar un valor</p>
+	<script>
+		/*El llamado de esta manera se hace despues que cargue el js
+		  Cuando pasa por aca renderizando o pintando lo hace
+		  por eso el codigo esta en el archivo inzucoSoftCargaPrimero.js*/
+		$numero = 12;
+		$retorno = retornoDatos($numero);
+		document.write("El RADIO es <strong>" + $numero + "</strong> y su AREA es <strong>" + $retorno + "</strong>");
+	</script>
+
+	<h2>Confirmación</h2>
+	<p>Toca quitar el comentario en el codigo</p>
+	<script>
+		/*El valor devuelto es un booleano */
+		/*var respuesta1 = confirm("Seguro desea eliminar Confirmación");*/
+	</script>
+
+	<h2>prompt</h2>
+	<p>Toca quitar el comentario en el codigo</p>
+	<script>
+		                                             /*El segundo valor es encaso de queno escriba nada.*/
+		/*var respuesta2 = prompt("Digite su nombre");*/  /*prompt("Digite su nombre", "No digito nada")*/
+		/*alert(respuesta2);*/
+		/*document.write("Su nombre es. " + respuesta2);*/
+
+	</script>
+
+	<h2>Elemnto ID</h2>
+	<div id="div1">
+		<p>	.: Contenido DIV :. </p>
+		<!--Hay que quitar el cometario en inzucoSoft.js linea 30 que dice alert(DivUno); -->
+	</div>
+
+	<h2>Navegador</h2>
+	<button onclick="siguiente()">Siguiente</button> <br>
+	<button onclick="">Otro</button> <br>
+	<button onclick="atras()">Atras</button> <br>
+	<script>
+		/*alert("Haz visitado " + history.length + " paginas de esta sesion del navegador" );*/
+		/*Quitar el comentario para que funcione*/
+	</script>
+
+	<h2>Navegador Location</h2>
+	<!--https://www.w3schools.com/jsref/obj_location.asp*/-->
+	<button onclick="conservaH()">Conserva la historia</button> <br>
+	<button onclick="borraH()">Borra la pagina del historia</button><br>
+	<button onclick="recarga1()">Recarga la pagina de la cache</button><br>
+	<button onclick="recarga2()">Recarga la pagina del servidor</button>
+
+	<h2>Navegador Navigator</h2>
+	<!--https://www.w3schools.com/jsref/prop_nav_language.asp-->
+	<div id="demo">
+	</div>
+
+	<h2>Fecha y hora</h2>
+	<!--https://www.w3schools.com/jsref/jsref_obj_date.asp-->
+	<div id="demo1">
+		<!--Primero se tiene que renderizar el objeto para hay si modificarlo-->
+		...
+	</div>
+	<script>
+		fechahora1();
+	</script>
+	<p>Fecha con el nombre del mes</p> 
+	<script>
+		var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+		var datos=new Date();
+		document.write(datos.getDate() + " de " + meses[datos.getMonth()] + " de " + datos.getFullYear());
+	</script>
+	<p>Fecha con nombre de més y nombre de día de la semana</p>
+	<script>
+		var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+		var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+		var f=new Date();
+		document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+	</script>
+
+
+	<script>
+		var f=new Date();
+		var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+		document.write('<div class="mifecha">');
+		document.write('<div class="ano">' + f.getFullYear() + '</div>');
+		document.write('<div class="dia">' + f.getDate() + '</div>');
+		document.write('<div class="mes">' + meses[f.getMonth()] + '</div>');
+		document.write('</div>');
+	</script>
+	<br>
+	<script>
+		var f=new Date();
+		var ano = f.getFullYear();
+		var mes = f.getMonth();
+		var dia = f.getDate();
+		var estiloDia;
+		var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+		var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+		var diasMes = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+		var diaMaximo = diasMes[mes];
+		if (mes == 1 && (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)))
+		   diaMaximo = 29;
+		document.write('<div class="mifecha2">');
+		document.write('<div class="mesano">' + meses[mes] + ' ' + ano + ':</div>');
+
+		for (i=1; i<=diaMaximo; i++){
+		   if(i == dia)
+		      estiloDia = "diaactual";
+		   else
+		      estiloDia = "dia";
+		   document.write('<div class="' + estiloDia + '">' + i + '</div>');
+		}   
+		document.write('</div>');
+	</script>
+
+	<script>
+		/*var fecha = new Date();
+		alert("Día: "+fecha.getDate()+"\nMes: "+(fecha.getMonth()+1)+"\nAño: "+fecha.getFullYear());
+		alert("Hora: "+fecha.getHours()+"\nMinuto: "+fecha.getMinutes()+"\nSegundo: "+fecha.getSeconds()+"\nMilisegundo: "+fech*a.getMilliseconds());*/
+	</script>
+
+	<br><br>
+	<button onclick="recarga1()">Recarga la pagina</button><br>
+
+	<h2>Operaciones math</h2>
+	<!--https://www.w3schools.com/jsref/jsref_obj_math.asp-->
+
+
+	
+	
+	<script type="text/javascript" src="inzucoSoft.js"></script>
+
+	<h2>Documentación oficial</h2>
+	<a href="https://www.w3schools.com/js/default.asp">							w3schools				</a> <br>
+	<a href="https://msdn.microsoft.com/es-es/library/2yfce773(v=vs.94).aspx">	Caracteres especiales	</a> <br>
+	<a href=""></a>
+	<a href=""></a>
+	<a href=""></a>
+	<a href=""></a>
+</body>
+</html>
